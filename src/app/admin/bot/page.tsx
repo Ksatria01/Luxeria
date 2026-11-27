@@ -1,0 +1,1 @@
+export default function Page(){return <><div className="dash-header"><div><div className="eyebrow">ADMIN CONTROL CENTER</div><h1>Bot monitoring</h1></div></div><div className="content-card"><p className="muted">Bot uptime, WhatsApp connection state and command telemetry require a signed server-to-server integration.</p></div></>}

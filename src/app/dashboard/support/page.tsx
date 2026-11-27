@@ -1,0 +1,1 @@
+export default function SupportPage(){return <><div className="dash-header"><div><div className="eyebrow">HELP CENTER</div><h1>Support</h1></div></div><div className="content-card"><h3>Need a hand?</h3><p className="muted">Support tickets will be enabled after the support workflow and moderation rules are configured.</p></div></>}

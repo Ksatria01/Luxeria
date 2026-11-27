@@ -1,0 +1,1 @@
+export default function HistoryPage(){return <><div className="dash-header"><div><div className="eyebrow">ACTIVITY</div><h1>Recent history</h1></div></div><div className="content-card"><p className="muted">No website activity records yet. Events will appear here after activity logging is enabled.</p></div></>}

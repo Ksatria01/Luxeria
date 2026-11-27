@@ -1,0 +1,1 @@
+export default function Page(){return <><div className="dash-header"><div><div className="eyebrow">ADMIN CONTROL CENTER</div><h1>Database monitoring</h1></div></div><div className="content-card"><p className="muted">Database health checks will be exposed through a restricted server endpoint. Secret keys are never sent to this page.</p></div></>}

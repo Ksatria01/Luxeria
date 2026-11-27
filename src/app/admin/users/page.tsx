@@ -1,0 +1,1 @@
+export default function Page(){return <><div className="dash-header"><div><div className="eyebrow">ADMIN CONTROL CENTER</div><h1>User management</h1></div></div><div className="content-card"><p className="muted">User lookup and role administration will be connected after the owner approval workflow is implemented.</p></div></>}

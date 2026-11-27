@@ -1,0 +1,14 @@
+import Link from 'next/link';
+import { SiteHeader } from '@/components/site-header';
+import { Bot, BrainCircuit, Gamepad2, Download, ShieldCheck, Radio } from 'lucide-react';
+const features = [
+  { icon: BrainCircuit, title: 'AI & Intelligence', text: 'AI-powered tools and creative utilities inside your WhatsApp workflow.' },
+  { icon: Download, title: 'Smart Downloader', text: 'A single home for supported media and content utilities.' },
+  { icon: Gamepad2, title: 'Game Hub', text: 'Player profiles, game activity, rankings and community challenges.' },
+  { icon: Bot, title: 'WhatsApp Automation', text: 'A connected bot experience built around useful commands.' },
+  { icon: ShieldCheck, title: 'Personal Dashboard', text: 'A private space for account details, activity and support.' },
+  { icon: Radio, title: 'Live System Status', text: 'A clearer view of service availability and platform updates.' }
+];
+export default function HomePage() {
+  return <><SiteHeader/><main><section className="hero"><div><div className="eyebrow"><span className="pulse"/> THE DIGITAL ECOSYSTEM</div><h1>More than a<br/><span className="gradient-text">WhatsApp bot.</span></h1><p className="hero-copy">AI, automation, entertainment and gaming. Everything you need from Luxeria, connected in one digital ecosystem.</p><div className="hero-actions"><Link className="button" href="/register">Explore Luxeria <span>↗</span></Link><Link className="text-link" href="/commands">Explore commands →</Link></div></div><div className="hero-card"><div className="card-top"><strong style={{letterSpacing:'.16em',fontSize:12}}>LUXERIA CORE</strong><span className="online">● SYSTEM READY</span></div><div className="terminal"><div><b>luxeria@core</b>:~$ system status</div><div>WhatsApp gateway ........ <b>CONNECTED</b></div><div>Database ................. <b>READY</b></div><div>Game services ........... <b>ONLINE</b></div><div>Web ecosystem ........... <b>INITIALIZING</b></div><br/><div><b>➜</b> One ecosystem. Endless possibilities.</div></div><div className="stat-grid"><div className="stat"><small>Platform</small><strong>Multi-tool</strong></div><div className="stat"><small>Experience</small><strong>Unified</strong></div></div></div></section><section className="section"><div className="section-heading"><div><div className="eyebrow">BUILT TO CONNECT</div><h2>One ecosystem. More possibilities.</h2><p>Explore the core experiences that make Luxeria.</p></div></div><div className="feature-grid">{features.map(({icon:Icon,title,text})=><article className="feature-card" key={title}><div className="feature-icon"><Icon size={20}/></div><h3>{title}</h3><p>{text}</p></article>)}</div></section></main><footer className="site-footer">© {new Date().getFullYear()} LUXERIA. Built for a connected experience.</footer></>;
+}

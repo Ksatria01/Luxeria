@@ -1,0 +1,2 @@
+import { createClient } from '@/lib/supabase/server';
+export default async function ProfilePage(){const s=await createClient();const {data:{user}}=await s.auth.getUser();return <><div className="dash-header"><div><div className="eyebrow">ACCOUNT</div><h1>My profile</h1></div></div><div className="content-card"><p className="muted">Signed-in identity</p><h3>{user?.email??user?.phone??'Luxeria user'}</h3><p className="muted">User ID: {user?.id}</p><p className="muted">Profile editing will be enabled after the profile table migration is applied.</p></div></>}

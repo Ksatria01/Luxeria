@@ -1,0 +1,2 @@
+import { SiteHeader } from '@/components/site-header';
+export default function CommandsPage(){return <><SiteHeader/><main className="page-wrap"><div className="eyebrow">COMMAND EXPLORER</div><h1 className="page-title">Find your next command.</h1><p className="muted">A searchable command catalog will be connected to the verified Luxeria command registry in a later integration step.</p><div className="content-card" style={{marginTop:28}}><h3>Command categories</h3><p className="muted">AI · Downloader · Stickers · Games · RPG · Group tools · Utilities</p></div></main></>}

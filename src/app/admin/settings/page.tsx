@@ -1,0 +1,1 @@
+export default function Page(){return <><div className="dash-header"><div><div className="eyebrow">ADMIN CONTROL CENTER</div><h1>System settings</h1></div></div><div className="content-card"><p className="muted">Website-wide settings and announcement controls will be added with audit logging.</p></div></>}

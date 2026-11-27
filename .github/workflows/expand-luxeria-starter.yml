@@ -1,0 +1,38 @@
+
+name: Install Luxeria Web Starter
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Luxeria-Web-Starter(1)(1).zip'
+      - '.github/workflows/expand-luxeria-starter.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract website
+        run: |
+          set -e
+          ARCHIVE="Luxeria-Web-Starter(1)(1).zip"
+          test -f "$ARCHIVE"
+          mkdir -p .extract
+          unzip -q "$ARCHIVE" -d .extract
+          cp -a .extract/Luxeria-Web/. .
+          rm -rf .extract "$ARCHIVE"
+
+      - name: Save website files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Install Luxeria Web Starter"
+          git push
+          
